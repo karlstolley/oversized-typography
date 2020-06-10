@@ -8,7 +8,21 @@
 </head>
 <body>
   <article>
-    <figure aria-labelledby="typography-header">
+    <!-- NOTE:
+      Adding `role="img"` causes the validator at https://validator.w3.org/nu/ to throw `Error: Bad
+      value img for attribute role on element figure.`
+
+      However, the ARIA in HTML specification Document Conformance table at
+      https://www.w3.org/TR/html-aria/#docconformance claims that `<figure>` elements WITHOUT
+      a <figcaption> descendant can take ANY role (with a `<figcaption>`, no role is permitted other
+      than `role="figure"` role already implicit with `<figure>`).
+
+      For reference:
+      * ARIA `img` role definition (https://www.w3.org/TR/wai-aria-1.1/#img):
+        > An img represents a single graphic within a document, whether or not it is formed by a
+        > collection of drawing objects.
+    -->
+    <figure role="img" aria-labelledby="typography-header">
       <b>Typography</b>
     </figure>
     <header id="typography-header">
