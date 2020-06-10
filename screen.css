@@ -8,9 +8,18 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 
 /* Begin site styles below */
 
+
+article {
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  grid-template-rows: 5vmax auto repeat(3,1fr);
+}
+
 figure {
   /* Disallow a horizontal scroll */
   overflow: hidden;
+  grid-column: 1 / 6;
+  grid-row: 1 / 6;
 }
 figure b {
   /* Set large, viewport-dependent type */
@@ -18,4 +27,19 @@ figure b {
   font-weight: bold;
   /* Pull it off to the left a bit */
   margin-left: -5%;
+  color: #CCC;
+}
+
+header {
+  grid-column: 2 / -1;
+  grid-row: 2 / 3;
+}
+p {
+  grid-column: 4 / 6;
+  grid-row: 4 / 6;
+  font-size: 24px;
+}
+h2 {
+  font-size: 36px;
+  padding-bottom: 48px;
 }
