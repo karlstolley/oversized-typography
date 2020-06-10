@@ -7,3 +7,15 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 /* stylelint-enable */
 
 /* Begin site styles below */
+
+figure {
+  /* Disallow a horizontal scroll */
+  overflow: hidden;
+}
+figure b {
+  /* Set large, viewport-dependent type */
+  font-size: 35vmax;
+  font-weight: bold;
+  /* Pull it off to the left a bit */
+  margin-left: -5%;
+}
